@@ -1,12 +1,16 @@
 const express = require('express');
+const router = require('./router');
+
 const app = express();
 
 // Middleware to parse JSON requests
 app.use(express.json());
 
-app.get('/', (req, res) => {
-    res.send('Welcome! Your server is up and running.');
-});
+app.use('/', router);
+
+
+
+
 
 
 module.exports = app ;
