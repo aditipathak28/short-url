@@ -7,6 +7,13 @@ const generateShortCode = () => {
 };
 
 const shortenService = (longUrl) =>{
+    // Check if the long URL already exists
+  if (longToShortMap[longUrl]) {
+    const existingShortCode = longToShortMap[longUrl];
+    return `http://localhost:8080/${existingShortCode}`;
+  }
+
+  // Otherwise, create a new one
   const shortCode = generateShortCode();
   const shortUrl = `http://localhost:8080/${shortCode}`;
 
