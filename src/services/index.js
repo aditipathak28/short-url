@@ -15,3 +15,12 @@ const shortenService = (longUrl) =>{
 
   return shortUrl ;
 }
+
+
+
+const getOriginalUrlService = (shortCode) => {
+  return shortToLongMap[shortCode]; // could be undefined
+};
+
+
+module.exports = { shortenService, getOriginalUrlService, };
