@@ -1,6 +1,8 @@
 const app = require('./src/app') ;
+const config = require('./src/config');
+const PORT = config.server.http.port ;
 
-app.listen( 8080 , ()=>{
-    console.log('Server listening on port 8080');
+app.listen( PORT , ()=>{
+    console.log(`Server listening on port ${PORT}`);
  }
 );
